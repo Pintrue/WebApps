@@ -21,7 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //nav bar eliminate border
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        
+
+        //status bar
+        if let status = UIApplication.shared.value(forKey: "statusBar") as? UIView {
+            status.backgroundColor = UIColor.white
+        }
         /*
         //status bar
         let statusBackground = UIView()
